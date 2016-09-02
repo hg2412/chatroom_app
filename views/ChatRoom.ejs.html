@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FSE ChatRoom</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src = "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src = "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+    <style>
+    .messages-container {
+        height: 50vh;
+        overflow: scroll;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <h2 class="navbar-brand">Welcome to FSE Chat Room!</h2>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <h4>Chat Messages:</h4>
+    <div class="messages-container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row" id="msg-head-row">
+                    <div class="col-xs-6" id="name-div">
+                        Name here!
+                    </div>
+                    <div class="col-xs-6" id="date-div">
+                        Date here!
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row" id="msg-text-row">
+                    <div class="col-xs-12" id="msg-div">
+                        chat!
+                        <br> chat!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="container">
+            <form class="form-vertical" onsubmit="/sendMsg" method="post" role="form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label for="name">Your Name:</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                            </inpout>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="message">Please enter your message:</label>
+                        <textarea class="form-control" rows="3" name = "message" id="msg-text-area">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
